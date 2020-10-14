@@ -3,3 +3,5 @@ Get the credentials from Oracle cloudshell to get OCI working for other projects
 ```curl -Lso- https://git.io/JTvBT | bash```
 or
 ```curl -Lso- https://git.io/JTvBT | bash > output```
+
+use ```oci os ns get``` to test
