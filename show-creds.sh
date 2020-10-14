@@ -13,6 +13,6 @@ export TENANCY_OCID=$(oci iam user list --all | jq -r '.data[0]."compartment-id"
 export REGION=$(oci iam region-subscription list | jq -r '.data[0]."region-name"')
 export REGION_KEY=$(oci iam region-subscription list | jq -r '.data[0]."region-key"')
 reset && echo -e "# Copy and paste the following into the Katacoda terminal:\n# Echo the login details into the correct file path in Katacoda
-echo \"[DEFAULT]\nuser=$USER_OCID\nfingerprint=$KEY_FINGERPRINT\ntenancy=$TENANCY_OCID\nregion=$REGION\nkey_file=/root/.oci/oci_api_key.pem\" >  ~/.oci/config\n
+echo \"[DEFAULT]\nuser=$USER_OCID\nfingerprint=$KEY_FINGERPRINT\ntenancy=$TENANCY_OCID\nregion=$REGION\nkey_file=~/.oci/oci_api_key.pem\" >  ~/.oci/config\n
 # Echo the private key into the correct file path in Katacoda. Keep this secret!\n
-echo \"$(cat ~/oci-keys/oci_api_key.pem)\" > /root/.oci/oci_api_key.pem\n# copy from the top of this terminal to the line above"
+echo \"$(cat ~/oci-keys/oci_api_key.pem)\" > ~/.oci/oci_api_key.pem\n# copy from the top of this terminal to the line above"
